@@ -15,6 +15,7 @@ help(){
       m wifi off                     # turn off your wifi
       m wifi on                      # turn on your wifi
       m wifi connect ESSID PASSWORD  # join a wifi network
+      m wifi bounce                  # turn off your wifi then back on
 __EOF__
 }
 
@@ -48,6 +49,12 @@ wifi_on(){
     networksetup -setairportpower ${_W_DEVICE} on
 }
 
+wifi_bounce(){
+    wifi_off
+    sleep 2
+    wifi_on
+}
+
 connect_network(){
     [ -z "$1" -o -z "$2" ] && help
     NETWORK="$1"
@@ -71,6 +78,9 @@ case $1 in
     on)
         wifi_on
         ;;
+    bounce)
+	wifi_bouce
+	;;
     connect)
         shift
         connect_network "$@"
