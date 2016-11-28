@@ -569,6 +569,7 @@ function _m_cmd {
                 "off:turn off your wifi" \
                 "on:turn on your wifi" \
                 "connect:join a wifi network" \
+		"bounce:turn on and off your wifi" \
                 help
             ;;
     esac
