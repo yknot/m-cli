@@ -79,7 +79,7 @@ case $1 in
         wifi_on
         ;;
     bounce)
-	wifi_bouce
+	wifi_bounce
 	;;
     connect)
         shift
