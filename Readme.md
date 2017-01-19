@@ -57,6 +57,7 @@ usage:  m [OPTIONS] COMMAND [help]
         gatekeeper
         hostname
         info
+		itunes
         lock
         ntp
         printer
@@ -271,6 +272,25 @@ usage:  m [OPTIONS] COMMAND [help]
       m info        #  print macOS operating system version information
 ```
 
+### Itunes:
+```
+   usage: m itunes [ status | play | pause | next | prev | mute | unmute | vol up | vol down | vol #| stop | quit | help ]
+
+    Examples:
+      m itunes status       # Show status
+      m itunes play         # Play track
+      m itunes pause        # Pause track
+      m itunes next         # Play next track
+      m itunes prev         # Play previous track
+      m itunes mute         # Mute iTunes
+      m itunes unmute       # Unmute iTunes
+      m itunes vol up       # Volume Up
+      m itunes vol down     # Volume Down
+      m itunes vol #        # Set volume level
+      m itunes stop         # Stop track
+      m itunes quit         # Quit iTunes
+```
+
 #### Lock:
 ```
     usage:  m lock [ help ]
@@ -322,6 +342,8 @@ usage:  m [OPTIONS] COMMAND [help]
     Examples:
       m nosleep until 3600            # no sleep until 3600 seconds
       m nosleep until my_script.sh    # no sleep until the script ends
+
+      m nosleep until pid 64377       # no sleep until the process id ends
 ```
 
 #### Notification:
@@ -473,6 +495,7 @@ usage:  m [OPTIONS] COMMAND [help]
     Examples:
       m vpn ls                              # list VPN connections
 
+      m vpn start                           # interactive mode
       m vpn start VPN                       # start vpn connection named VPN
       m vpn start VPN USER                  # start a vpn connection with a given user
       m vpn start VPN USER PASS             # start a vpn connection with a given user and password
@@ -503,6 +526,7 @@ usage:  m [OPTIONS] COMMAND [help]
       m wifi off                     # turn off your wifi
       m wifi on                      # turn on your wifi
       m wifi connect ESSID PASSWORD  # join a wifi network
+      m wifi connect ESSID           # join a wifi network (prompt for password)
 
 ```
 
