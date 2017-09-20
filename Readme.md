@@ -33,7 +33,6 @@
 ## Usage
 
 ```
-
   Swiss Army Knife for macOS ! 
 
 
@@ -54,10 +53,11 @@ usage:  m [OPTIONS] COMMAND [help]
         dock
         finder
         firewall
+        flightmode
         gatekeeper
         hostname
         info
-		itunes
+        itunes
         lock
         ntp
         printer
@@ -78,7 +78,6 @@ usage:  m [OPTIONS] COMMAND [help]
         vpn
         wallpaper
         wifi
-
 ```
 
 ####  Battery:
@@ -127,7 +126,6 @@ usage:  m [OPTIONS] COMMAND [help]
 
       m disk reformat /Volumes/myvol            # reformat a volume
       m disk rename CURRENTNAME NEWNAME         # rename a volume
-
 ```
 
 #### Display:
@@ -145,7 +143,6 @@ usage:  m [OPTIONS] COMMAND [help]
 
     Examples:
       m dns flush       # flushes local DNS
-
 ```
 
 #### Dock:
@@ -165,7 +162,6 @@ usage:  m [OPTIONS] COMMAND [help]
       m dock addrecentitems         # Add a stack containg your recent items to the Dock
                                     #  (You can change the stack's type by right clicking on it)
       m dock prune                  # Removes all apps from Dock
-
 ```
 
 #### Dir:
@@ -184,12 +180,11 @@ usage:  m [OPTIONS] COMMAND [help]
 
       m dir size        # calculate current folder size
       m dir size /path  # calculate folder size in a specific path
-
 ```
 
 #### Finder:
 ```
-    usage: m finder [ showhiddenfiles | showfileextensions | showdesktop | help  ]
+    usage: m finder [ showhiddenfiles | showfileextensions | showdesktop | showpath | help  ]
 
     Examples:
       m finder showhiddenfiles           # get the current status
@@ -204,6 +199,8 @@ usage:  m [OPTIONS] COMMAND [help]
       m finder showdesktop YES           # enable the desktop
       m finder showdesktop NO            # disable the desktop
 
+      m finder showpath YES              # show the current opened folder path on the top bar of the Finder window
+      m finder showpath NO               # show the current opened folder name on the top bar of the Finder window
 ```
 
 #### Firewall:
@@ -217,7 +214,15 @@ usage:  m [OPTIONS] COMMAND [help]
        m firewall list                  # List applications handled by firewall
        m firewall add /path/to/file     # Add app to firewall
        m firewall remove /path/to/file  # Remove app from firewall
+```
 
+#### Flightmode:
+```
+    usage:  m flightmode [ on | off | help ]
+
+    Examples:
+      m flightmode on                      # turn flightmode on
+      m flightmode off                     # turn flightmode off
 ```
 
 #### Gatekeeper:
@@ -235,7 +240,6 @@ usage:  m [OPTIONS] COMMAND [help]
       m gatekeeper disable MYRULE                       # disable rule
 
       m gatekeeper create  RULENAME /path/to/program    #  Create a rule for the application
-
 ```
 
 #### Group:
@@ -250,7 +254,6 @@ usage:  m [OPTIONS] COMMAND [help]
       m group removeuser myuser mygroup     # remove an user from a specific group
 
       m group ismember myuser mygroup       # show if the user is a member of a specific group
-
 ```
 
 #### Hostname:
@@ -406,7 +409,6 @@ usage:  m [OPTIONS] COMMAND [help]
 
       m service load com.apple.sessionlogoutd       # load a service
       m service unload com.apple.sessionlogoutd     # unload a service
-
 ```
 
 #### Shutdown:
@@ -503,7 +505,6 @@ usage:  m [OPTIONS] COMMAND [help]
 
       m vpn stop VPN                        # stop vpn connection named VPN
       m vpn status VPN                      # status vpn connection named VPN
-
 ```
 
 #### Wallpaper:
@@ -527,7 +528,6 @@ usage:  m [OPTIONS] COMMAND [help]
       m wifi on                      # turn on your wifi
       m wifi connect ESSID PASSWORD  # join a wifi network
       m wifi connect ESSID           # join a wifi network (prompt for password)
-
 ```
 
 ## Contributing
