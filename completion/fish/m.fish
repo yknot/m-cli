@@ -12,7 +12,7 @@ function __fish_m_needs_command
             and continue
             switch $c
                 case "--update" "--uninstall"
-					return 1
+                    return 1
                 case "*"
                     echo $c
                     return 1
@@ -36,13 +36,22 @@ end
 complete -f -c m -n '__fish_m_needs_command' -l update -d 'Update m-cli'
 complete -f -c m -n '__fish_m_needs_command' -l uninstall -d 'Uninstall m-cli'
 
+complete -f -c m -n '__fish_m_needs_command' -a airdrop -d 'Manage airdrop status'
+complete -f -c m -n '__fish_m_using_command airdrop' -a "on" -d 'turn on airdrop'
+complete -f -c m -n '__fish_m_using_command airdrop' -a "enable" -d 'turn on airdrop'
+complete -f -c m -n '__fish_m_using_command airdrop' -a "off" -d 'turn off airdrop'
+complete -f -c m -n '__fish_m_using_command airdrop' -a "disable" -d 'turn off airdrop'
+complete -f -c m -n '__fish_m_using_command airdrop' -a "help" -d 'Show help'
+
 complete -f -c m -n '__fish_m_needs_command' -a battery -d 'Get the battery status'
 complete -f -c m -n '__fish_m_using_command battery' -a "status" -d 'Get status'
 complete -f -c m -n '__fish_m_using_command battery' -a "help" -d 'Show help'
 
 ## XXX:
 complete -f -c m -n '__fish_m_needs_command' -a bluetooth -d 'Manage bluetooth status'
+complete -f -c m -n '__fish_m_using_command bluetooth' -a "on" -d 'turn on bluetooth'
 complete -f -c m -n '__fish_m_using_command bluetooth' -a "enable" -d 'turn on bluetooth'
+complete -f -c m -n '__fish_m_using_command bluetooth' -a "off" -d 'turn off bluetooth'
 complete -f -c m -n '__fish_m_using_command bluetooth' -a "disable" -d 'turn off bluetooth'
 complete -f -c m -n '__fish_m_using_command bluetooth' -a "help" -d 'Show help'
 
@@ -208,6 +217,10 @@ complete -f -c m -n '__fish_m_needs_command' -a timezone -d 'Manage timezone'
 complete -f -c m -n '__fish_m_using_command timezone' -a "list" -d 'list available timezones'
 complete -f -c m -n '__fish_m_using_command timezone' -a "set" -d 'set timezone'
 complete -f -c m -n '__fish_m_using_command timezone' -a "help" -d 'Show help'
+
+complete -f -c m -n '__fish_m_needs_command' -a touchbar -d 'Manage touchbar'
+complete -f -c m -n '__fish_m_using_command touchbar' -a "reset" -d 'reset the touchbar'
+complete -f -c m -n '__fish_m_using_command touchbar' -a "help" -d 'Show help'
 
 complete -f -c m -n '__fish_m_needs_command' -a trash -d 'Manage the trash'
 complete -f -c m -n '__fish_m_using_command trash' -a "status" -d 'get trash info'
